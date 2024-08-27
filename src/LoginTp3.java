@@ -178,8 +178,14 @@ public class LoginTp3 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"BIENVENIDO");
         }
         else{
-            JOptionPane.showMessageDialog(null, "Usuario y/o Contraseña Incorrectos");
+         if(!usuario.equals("alumno@ulp.edu.ar")){
+         jtUsuario.setText("");
+         jtUsuario.requestFocus();
+         
+                 JOptionPane.showMessageDialog(null, "Usuario y/o Contraseña Incorrectos");
+            }
         }
+        
         }
         
     }//GEN-LAST:event_jbVerificarActionPerformed
