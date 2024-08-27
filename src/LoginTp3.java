@@ -171,11 +171,15 @@ public class LoginTp3 extends javax.swing.JFrame {
         String usuario = jtUsuario.getText();
         String contraseña =jpContraseña.getText();
         
+        if(usuario.isEmpty() || contraseña.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No puede dejar campos vacios");
+        }else{
         if(usuario.equals("alumno@ulp.edu.ar") && contraseña.equals("12345678")){
             JOptionPane.showMessageDialog(null,"BIENVENIDO");
         }
         else{
             JOptionPane.showMessageDialog(null, "Usuario y/o Contraseña Incorrectos");
+        }
         }
         
     }//GEN-LAST:event_jbVerificarActionPerformed
